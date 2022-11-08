@@ -1,7 +1,11 @@
 import React from "react";
 
 const Purchase = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h1>Purchase</h1>
+    </div>
+  );
 };
 
 export default Purchase;

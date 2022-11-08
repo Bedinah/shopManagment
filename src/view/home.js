@@ -20,7 +20,7 @@ const Home = (props) => {
                   alt="logo"
                   style={{ width: "30%", height: "20vh" }}
                 />
-                <label>Signin Shop Managment</label>
+                {/* <label>Signin Shop Managment</label> */}
                 <TextField
                   fullWidth
                   id="filled-basic"
@@ -34,6 +34,7 @@ const Home = (props) => {
                   variant="filled"
                 />
                 <Button
+                  fullWidth
                   variant="contained"
                   onClick={() => {
                     navigate("/dashboard");
