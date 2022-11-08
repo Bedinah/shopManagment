@@ -20,7 +20,7 @@ const Home = (props) => {
                   alt="logo"
                   style={{ width: "30%", height: "20vh" }}
                 />
-                {/* <label>Signin Shop Managment</label> */}
+                <label>ORDER YOUR PRODUCT</label>
                 <TextField
                   fullWidth
                   id="filled-basic"
