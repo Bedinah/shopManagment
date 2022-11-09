@@ -1,7 +1,8 @@
 import auth, { authActions } from "./index";
 import { loginService } from "./services";
 
-export const loginAction = async (data) => async (dispatch) => {
+export const loginAction = (data) => async (dispatch) => {
+  
   dispatch(authActions.setIsFetching(true));
   try {
     const res = await loginService(data);
@@ -11,6 +12,7 @@ export const loginAction = async (data) => async (dispatch) => {
     }
     dispatch(authActions.setIsFetching(false));
   } catch (error) {
+    dispatch(authActions.setIsFetching(false));
     console.log("Error:" + error);
   }
 };

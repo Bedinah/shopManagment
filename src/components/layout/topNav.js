@@ -12,9 +12,11 @@ import Settings from "@mui/icons-material/Settings";
 import Logout from "@mui/icons-material/Logout";
 import { Card } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const TopnavComponent = (props) => {
   const navigate = useNavigate();
+  const { user } = useSelector((state) => state.auth);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -37,7 +39,7 @@ const TopnavComponent = (props) => {
         }}
       >
         <Typography sx={{ minWidth: 100 }}>
-          <b>Admin</b> ~ Bazubagira
+          <b>{user?.role}</b> ~ {user?.names}
         </Typography>
         <Tooltip title="Account settings">
           <IconButton
@@ -48,7 +50,7 @@ const TopnavComponent = (props) => {
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}>B</Avatar>
+            <Avatar sx={{ width: 32, height: 32 }}> src={user?.picture}</Avatar>
           </IconButton>
         </Tooltip>
       </Card>
