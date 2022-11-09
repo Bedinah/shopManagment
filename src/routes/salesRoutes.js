@@ -3,7 +3,7 @@ import * as SalesController from "../controllers/salesController.js";
 import { verifyUserToken } from "../middleware/verifyToken.js";
 
 const route = Router();
-route.use(verifyUserToken);
+// route.use(verifyUserToken);
 route
   .route("/")
   .post(SalesController.createController)

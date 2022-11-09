@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const Schema = new mongoose.Schema(
   {
     quantity: Number,
-    price: Number,
+    price: String,
     user: {
       type: mongoose.Schema.ObjectId,
       ref: "user",
