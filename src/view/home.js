@@ -20,7 +20,7 @@ const Home = (props) => {
   };
   useEffect(() => {
     if (token) {
-      navigate("dashboard");
+      navigate("/dashboard");
     }
   }, [token]);
   return (

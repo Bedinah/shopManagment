@@ -1,9 +1,10 @@
 import React from "react";
+import TableShop from "../components/tableShop";
 
 const Product = () => {
   return (
     <div>
-      <h1>Product</h1>
+      <TableShop />
     </div>
   );
 };

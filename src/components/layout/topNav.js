@@ -39,7 +39,7 @@ const TopnavComponent = (props) => {
         }}
       >
         <Typography sx={{ minWidth: 100 }}>
-          <b>{user?.role}</b> ~ {user?.names}
+          {user?.role} ~ <b>{user?.names}</b>
         </Typography>
         <Tooltip title="Account settings">
           <IconButton
@@ -50,7 +50,7 @@ const TopnavComponent = (props) => {
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
           >
-            <Avatar sx={{ width: 32, height: 32 }}> src={user?.picture}</Avatar>
+            <Avatar sx={{ width: 52, height: 52 }} src={user?.picture}></Avatar>
           </IconButton>
         </Tooltip>
       </Card>
